@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AffiliateGo AI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #2b2b2b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            width: 90%;
+            max-width: 1080px; 
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #5f6368;
+        }
+        .countdown {
+            font-size: 64px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+        .btn:hover {
+            background-color: #1557b0;
+        }
+        .bookmark-tip {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #d93025;
+            background: #fce8e6;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #fad2cf;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Menghubungkan ke Asisten AI...</h1>
+        <p>Halo! Anda sedang diarahkan ke ruang obrolan cerdas AffiliateGo secara otomatis.</p>
+        
+        <div class="countdown" id="timer">5</div>
+        
+        <a href="https://gemini.google.com/share/68211d541bf9" class="btn">Klik Jika Tidak Dialihkan</a>
+
+        <div class="bookmark-tip">
+            ⭐ <strong>TIPS PENTING:</strong> Tekan ikon <strong>Bintang (Bookmark)</strong> di browser Anda <strong>SEKARANG</strong> agar besok Anda bisa langsung kembali ke halaman <em>affiliatego.id</em> ini!
+        </div>
+    </div>
+
+    <script>
+        // Link tujuan Gemini Anda
+        const targetUrl = "https://gemini.google.com/share/68211d541bf9";
+        
+        // Waktu hitung mundur
+        let timeLeft = 5;
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
